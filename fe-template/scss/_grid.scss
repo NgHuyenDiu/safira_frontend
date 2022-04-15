@@ -1,0 +1,50 @@
+$cols:12;
+$gutter:10px; //khoang cach giua hai item trong he thong luoi
+.row {
+    //@for -from 1 to 12 : chay tu 1 den 11
+    //@for -from 1 throung 12 chay tu 1 den 12
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$gutter/2;
+    overflow: hidden;
+    @for $i from 1 through $cols {
+        @media (max-width: 576px) {
+            .col-xs-#{$i} {
+                padding: $gutter/2;
+                width: (100%/$cols)*$i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @media (max-width: 768px) {
+            .col-sm-#{$i} {
+                padding: $gutter/2;
+                width: (100%/$cols)*$i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @media (max-width: 992px) {
+            .col-md-#{$i} {
+                padding: $gutter/2;
+                width: (100%/$cols)*$i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @media (max-width: 1140px) {
+            .col-lg-#{$i} {
+                padding: $gutter/2;
+                width: (100%/$cols)*$i;
+            }
+        }
+    }
+    @for $i from 1 through $cols {
+        @media (min-width: 1140px) {
+            .col-xl-#{$i} {
+                padding: $gutter/2;
+                width: (100%/$cols)*$i;
+            }
+        }
+    }
+}
